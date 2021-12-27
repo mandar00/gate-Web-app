@@ -1,0 +1,26 @@
+[
+    {
+        "id":"1",
+        "sub":"Engineering Mathematics",
+        "topics":"Linear Algebra ,Calculus ,Differential Equations ,Vector Analysis ,Complex Analysis ,Numerical Methods ,Probability and Statistics"
+
+    },
+    {
+        "id":"2",
+        "sub":"Networks, Signals and Systems",
+        "topics":"Circuit analysis,Continuous-time signals, Discrete-time signals"
+
+    },
+    {
+        "id":"3",
+        "sub":"Electronic Devices",
+        "topics":"Energy bands in intrinsic and extrinsic semiconductors, equilibrium carrier concentration, direct and indirect band-gap semiconductors.Carrier transport: diffusion current, drift current, mobility and resistivity, generation and recombination of carriers, and continuity equations. P-N junction, Zener diode, BJT, MOS capacitor, MOSFET, LED, photodiode, and solar cell."
+
+    },
+    {
+        "id":"4",
+        "sub":"Analog Circuits",
+        "topics":"Diode circuits: clipping, clamping, and rectifiers.BJT and MOSFET amplifiers: biasing, ac coupling, small-signal analysis, frequency response. Current mirrors and amplifiers. Op-amp circuits: Amplifiers, summers, differentiators, integrators, active filters, Schmitt triggers, and oscillators"
+
+    }
+]
