@@ -1,0 +1,16 @@
+[
+    {
+        "name":"Engineering Mathematics"
+    },
+    {
+        "Linear Algebra":"../pdf/MATH/linear algebra.pdf",
+        "Calculus":"../pdf/MATH/CALCULUS CLASS NOTES (gate2016.info).pdf",
+        "Differential Equations":"../pdf/MATH/DIFFERENTIAL EQUATIONS (ErForum).pdf",
+        "Vector Analysis":"../pdf/MATH/Vectors[1].pdf",
+        "Complex Analysis":"../pdf/MATH/COMPLEX VARIABLES (gate2016.info).pdf",
+        "Probability and Statistics":"../pdf/MATH/PROBABILITY AND STATISTICS (gate2016.info).pdf",
+        "Numerical Methods":"../pdf/MATH/MA8491 Numerical Methods Lecture Notes - Regulation 2017 (Written).pdf"
+        
+
+    }
+]
