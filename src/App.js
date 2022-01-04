@@ -10,6 +10,7 @@ import Profile from "./components/displayComponents/Profile";
 import VideoLec from "./components/displayComponents/VideoLec";
 import Login from "./components/displayComponents/Login";
 import SignUp from "./components/displayComponents/SignUp";
+import Edit from "./components/displayComponents/Edit";
 
 const App = () => {
   
@@ -19,15 +20,16 @@ const App = () => {
         <Nav />
       </div>
       <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/vidoe_lec" element={<VideoLec/>} />
-        <Route exact path="/notes" element={<Notes/>} />
-        <Route exact path="/test" element={<MockTest/>} />
-        <Route exact path="/forum" element={<Forum/>} />
-        <Route exact path="/about_us" element={<AboutUs/>} />
-        <Route exact path="/profile" element={<Profile/>} />
-        <Route exact path="/login" element={<Login/>} />
-        <Route exact path="/sign_up" element={<SignUp/>} />
+        <Route exact={true} path="/" element={<Home/>} />
+        <Route exact={true} path="/video_lec" element={<VideoLec/>} />
+        <Route exact={true} path="/notes" element={<Notes/>} />
+        <Route exact={true} path="/test" element={<MockTest/>} />
+        <Route exact={true} path="/forum" element={<Forum/>} />
+        <Route exact={true} path="/about_us" element={<AboutUs/>} />
+        <Route exact={true} path="/profile" element={<Profile/>} />
+        <Route exact={true} path="/profile/edit" element={<Edit/>} />
+        <Route exact={true} path="/login" element={<Login/>} />
+        <Route exact={true} path="/sign_up" element={<SignUp/>} />
       </Routes>
     </>
   );

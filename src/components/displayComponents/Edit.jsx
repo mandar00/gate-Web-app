@@ -1,7 +1,11 @@
 import React, { useEffect,useReducer } from 'react'
-import { NavLink } from 'react-router-dom';
 import {db} from "../../misc/Firebase"
 import {auth} from "../../misc/Firebase"
+import {WriteToDatabase} from "../databaseFunctions/WriteFunc"
+import { NavLink } from 'react-router-dom'
+import {UploadFile} from "../databaseFunctions/UploadImg"
+
+
 
 
 const initialState={
@@ -24,9 +28,10 @@ const reducer=(state,action)=>{
 
 
 
-const Profile=() =>{
 
-const[{name,email,phoneNo,clgName},dispatch]=useReducer(reducer,initialState)
+const Edit=() =>{
+
+    const[{name,email,phoneNo,clgName},dispatch]=useReducer(reducer,initialState)
 
 
 
@@ -58,40 +63,53 @@ const[{name,email,phoneNo,clgName},dispatch]=useReducer(reducer,initialState)
            Read();
         
     },[])
-    const user=auth.currentUser
+
+
+    const submit=()=>{
+        const Name=document.querySelector("#editName").value
+        const Phone=document.querySelector("#editPhone").value
+        const ClgName=document.querySelector("#editClgName").value
+        const Img=document.querySelector("#editImg").value
+        const user=auth.currentUser
+        WriteToDatabase(user,Name,Phone,ClgName,Img)
+    }
+
+
 
 return(
     <>
       <div className='profileMainDiv'>
             <div className='profileCardTitle'>
-                <p className='profileUserName'>{name}</p>
+                <p className='profileUserName'>mandar sakpal</p>
                 <div className='profileCardContent'>
-                    <div className='profileImageDiv'>
-                            <img src={user.photoURL} alt='profile'></img>      
-                    </div>
-                    <div className='profileUserDetailsDiv'>
+                <div className='profileUserDetailsDiv'>
                         <div className='profileUserDetailsTitle'>
                         </div>
                         <div className='profileUserDetails'>
                           <label> Name:
-                              <input type="text" disabled={true} value={`${name}`}></input>
+                              <input id='editName' type="text" contentEditable={true} disabled={false} defaultValue={name} ></input>
                           </label>
                           <label> Email:
-                              <input type="email" disabled={true} value={`${email}`}></input>
+                              <input id='editEmail' type="email" contentEditable={true} disabled={true} defaultValue={email} ></input>
                           </label>
                           <label> Phone No.:
-                              <input type="tel" disabled={true} value={`${phoneNo}`}></input>
+                              <input id='editPhone' type="tel" contentEditable={true} disabled={false} defaultValue={phoneNo} ></input>
                           </label>
                         
                           <label> Collage:
-                              <input type="text" disabled={true} value={`${clgName}`}></input>
+                              <input id='editClgName' type="text" contentEditable={true} disabled={false} defaultValue={clgName} ></input>
                           </label>
-                          <NavLink  to='/profile/edit'><button type='button'> Edit</button>  </NavLink>
+                          <label> Image:
+                              <input onChange={UploadFile} id='editImg' type="file" disabled={false} ></input>
+                          </label>
+                          <NavLink  to='/profile'><button type='button' onClick={submit}> Submit</button>  </NavLink>
                         </div>
                     </div>
                 </div>
             </div>
+
       </div>
-    </>)
+    </>
+    )
 }
-export default Profile
+export default Edit

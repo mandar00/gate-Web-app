@@ -1,12 +1,13 @@
-import {db} from "../misc/Firebase"
+import {db} from "../../misc/Firebase"
 
 
-export function WriteToDatabase(user){
+export function WriteToDatabase(user,Name,phone,clgName,img){
     db.collection("users").doc(user.uid).set({
         uid:user.uid,
-        name:user.displayName,
+        name:Name,
         email:user.email,
-        phone:user.phoneNumber,
-       
+        phone:phone,
+        clgName:clgName,
+        Img:img
     })
 }

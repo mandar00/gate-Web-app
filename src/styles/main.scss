@@ -625,11 +625,198 @@ a.active{
   }
 }
 
+.lecMainDiv{
+  width: 100vw;
+  height: 90vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(44,58,71,0.9586104705554097) 99%);
+  // background-color: aqua;
+  overflow-x: hidden;
+  .lecSubBar{
+    width: 100%;
+    height: 10%;
+    background-color: cornsilk;
+    position: relative;
+    p{
+      display: block;
+      float: left;
+      width: 5rem;
+      height: 100%;
+      // background-color: crimson;
+      margin:0 .5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+    input{
+      display: block;
+      float: right;
+      width: 20rem;
+      height: 2rem;
+      margin:.7rem  0rem ;
+      border: none;
+      outline: none;
+      border-radius: .8rem;
+
+    }
+    button{
+      display: block;
+      float: right;  
+      width: 4rem;
+      height: 2rem;
+      margin:.7rem  .3rem ;
+      margin-right: 1rem;
+      border-radius: .8rem;
+
+    }
+   
+    
+  }
+  .lecMainContentDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+    .lecSideBarDiv{
+      width: 20%;
+      height: 100%;
+      // background-color: darkblue;
+      overflow-y: scroll;
+      .lecSidebarTitle{
+        width: 100%;
+        height: 7%;
+        // background-color: darkcyan;
+        text-align: center;
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+        color: white;
+        // border-bottom: 2px solid black;
+      }
+    }
+    .lecVideoDiv{
+      width: 80%;
+      height: 100%;
+      // background-color: darkgoldenrod;
+      .lecVideoDivTitle{
+        width: 100%;
+        height: 9%;
+        // background-color: darkorange;
+        text-align: center;
+        font-size: 1.8rem;
+        // border-bottom: 2px solid black;
+        margin-bottom: 1rem;
+        color: white;
+
+      }
+
+      .lecVideoLink{
+        width: 100%;
+        height: 6%;
+        // background-color: darkred;
+        display: flex;
+        .lecVideoIcon{
+          width: 10%;
+          height: 100%;
+          // background-color: darksalmon;
+          margin: 0 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
+        .lecVideoTitle{
+          width: 90%;
+          height: 100%;
+          // background-color: darkseagreen;
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          margin: .5rem 0;
+         
+        }
+      }
+    }
+  }
+ 
+}
 
 
+.lecMathDiv{
+  margin-top: 2rem;
+p{
+  width: 100%;
+  height: 2rem;
+  // background-color: yellow;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0rem;
+}
+.lecSubTopicName{
+  width: 100%;
+  height: 2rem;
+  // background-color: yellow;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  font-weight: 500;
+}
+.lecVideoTitle{
+  width: 100%;
+  height: 100%;
+  // background-color: yellow;
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
+}
 
-
-
+.mathSidebarMainDiv{
+  width: 100%;
+  height: 2rem;
+  // background-color: aqua;
+  text-align: center;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem ;
+  }
+  .mathSidebarTopicDiv{
+    width: 100%;
+    // background-color: bisque;
+    margin: .5rem 0;
+    display: block;
+    .mathSidebarTopicName{
+      width: 100%;
+      height: 2rem;
+      // background-color: blue;
+      display: flex;
+      justify-content: center;
+      p{
+        font-size: 1.3rem;
+      }
+    }
+    .mathSidebarTopicLec{
+      display: none;
+      width: 100%;
+      height: 2rem;
+      // background-color: blue;
+      margin: 0.2rem 0;
+      overflow: hidden;
+      p{
+        font-size: 1rem;
+      }
+    }
+  }
+ 
+}
 
 
 

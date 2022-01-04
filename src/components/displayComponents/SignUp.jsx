@@ -26,7 +26,7 @@ const SignUp = () => {
               <input type="password" id="password" placeholder="Password" required></input><br/>
               <input type="tel" id="phoneNo" placeholder="+91 **********" required></input><br/>
               <input type="text" id="clgName" placeholder="Collage Name" required></input><br/>
-              <p>Already Have An Accout?<NavLink to='/login'> Click Here To Log In</NavLink></p>
+              <p>Already Have An Accout?<NavLink  to='/login'> Click Here To Log In</NavLink></p>
               <button type="button" onClick={signUpFunc}>Submit</button>
           </div>
         </div>

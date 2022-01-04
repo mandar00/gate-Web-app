@@ -1,7 +1,8 @@
 import {auth} from "../../misc/Firebase"
+import {WriteToDatabase} from "../databaseFunctions/WriteFunc"
 
 export async function signUpFunc (){
-
+    const img=null;
     const Name=document.querySelector("#name").value
     const Email=document.querySelector("#email").value
     const Password=document.querySelector("#password").value
@@ -11,11 +12,9 @@ export async function signUpFunc (){
     try {
         const result =await auth.createUserWithEmailAndPassword(Email,Password)
         console.log(result)
-        await result.user.updateProfile({
-            Displayname:{Name}
-        })
-        // await result.user.sendEmailVerification()
-
+        await result.user.sendEmailVerification()
+        alert("Signed up")
+        WriteToDatabase(result.user,Name,Phone,ClgName,img);
         
     } catch (error) {
         console.log(error.message)
