@@ -27,7 +27,7 @@ code {
   height: 100%;
   overflow: hidden;
   :nth-child(7){
-    position: absolute;
+    position: sticky;
     float: right;
     right: 9rem;
   }
@@ -626,28 +626,31 @@ a.active{
 }
 
 .lecMainDiv{
-  width: 100vw;
-  height: 90vh;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(44,58,71,0.9586104705554097) 99%);
-  // background-color: aqua;
+  width: 98.7vw;
+  height: 100%;
+  background-color: #b2bec3;
   overflow-x: hidden;
+  overflow-x: hidden;
+  position: relative;
   .lecSubBar{
     width: 100%;
     height: 10%;
-    background-color: cornsilk;
+    background-color: black;
     position: relative;
-    p{
+   
+    a{
       display: block;
       float: left;
       width: 5rem;
       height: 100%;
-      // background-color: crimson;
+      background-color: crimson;
       margin:0 .5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 1.2rem;
+      text-decoration: none;
+      color: black;
     }
     input{
       display: block;
@@ -675,7 +678,7 @@ a.active{
   }
   .lecMainContentDiv{
     width: 100%;
-    height: 100%;
+    // height: 100%;
     display: flex;
     
     .lecSideBarDiv{
@@ -776,48 +779,74 @@ p{
 }
 }
 
-.mathSidebarMainDiv{
+.mathSideBarMainDiv{
   width: 100%;
-  height: 2rem;
-  // background-color: aqua;
-  text-align: center;
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  p{
-    font-size: 1.5rem;
-    margin-bottom: 1rem ;
-  }
-  .mathSidebarTopicDiv{
+  // background-color: aquamarine;
+  .mathSidebarSubDiv{
     width: 100%;
+    // height: 3rem;
     // background-color: bisque;
-    margin: .5rem 0;
-    display: block;
-    .mathSidebarTopicName{
+    margin: 1rem 0;
+    p{
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .SideBarTopicTitle{
       width: 100%;
       height: 2rem;
       // background-color: blue;
-      display: flex;
-      justify-content: center;
+      margin: .6rem 0;
+      box-shadow: -1px -13px 27px -9px rgba(0,0,0,0.63) inset;
+-webkit-box-shadow: -1px -13px 27px -9px rgba(0,0,0,0.63) inset;
+-moz-box-shadow: -1px -13px 27px -9px rgba(0,0,0,0.63) inset; 
       p{
+        text-align: center;
         font-size: 1.3rem;
+      font-weight: 400;
+
       }
     }
-    .mathSidebarTopicLec{
-      display: none;
-      width: 100%;
-      height: 2rem;
-      // background-color: blue;
-      margin: 0.2rem 0;
-      overflow: hidden;
-      p{
-        font-size: 1rem;
-      }
+
+      .SideBarTopicName{
+        width: 100%;
+        height: 1.8rem;
+        // background-color: rgb(0, 255, 213);
+        margin: 0.2rem 0;
+        a{
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 200;
+          text-decoration: none;
+          color: black;
+          transition: 2s;
+        }
+      
+      
     }
+    
   }
- 
 }
 
+.goToTop{
+  // display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  // background-color: blue;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .topbtn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+}
 
 
 

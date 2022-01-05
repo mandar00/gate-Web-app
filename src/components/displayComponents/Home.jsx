@@ -9,8 +9,11 @@ import onlineTest from "../../images/onlineTest.jpg"
 import onlineForum from "../../images/onlineForum2.jpg"
 
 const Home = () => {
+  const onScroll=()=>{
+    console.log(window.scrollY)
+  }
 
-
+  window.addEventListener("scroll",onScroll)
   return (
     <>
       <div className="homeMainDiv">

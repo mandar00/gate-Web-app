@@ -6,20 +6,20 @@ const Math = () => {
   return (
     <>
       <div className="lecMathDiv">
-        <p>Math</p>
-        {mathData.map((val) => {
+        <p id="Math">Math</p>
+        {mathData.map((val,ind) => {
           return (
-            <div>
+            <div key={ind}>
               <div className="lecSubTopicName">{val.topic}</div>
               {val.lec.map((value,index)=>{
                   return(
 
-                <div className="lecVideoLink">
+                <div key={index} className="lecVideoLink">
                 <div className="lecVideoIcon">
                   <img src={ytIcon} alt="youtube"></img>
                 </div>
-                <div className="lecVideoTitle">
-                  <a rel="noreferrer noopener" href={`${value}`}>{`${val.title[index]}`}</a>
+                <div id={`${ind}${index}`} className="lecVideoTitle">
+                  <a target="_blank" rel="noreferrer noopener" href={`${value}`}>{`${val.title[index]}`}</a>
                 </div>
               </div>
                   )

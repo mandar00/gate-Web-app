@@ -1,32 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import MathData from "../../dataFiles/videoLec/MathLec.json";
 
-const SidebarMath = () => {
+const Accordian = () => {
+  const [show, setShow] = useState(true);
   return (
     <>
-      <div className="mathSidebarMainDiv">
-        <p>Math</p>
-        {MathData.map((val) => {
-          return (
-            <div className="mathSidebarTopicDiv">
-              <div className="mathSidebarTopicName">
-                <p>
-                    {val.topic} <i class="fa fa-chevron-circle-down"></i>
-                </p>
-              </div>
-                {val.title.map((value)=>{
-                    return(
-                        <div className="mathSidebarTopicLec">
-                            {/* {value} */}
-                        </div>
-
-                    )
-                })}
-            </div>
-          );
-        })}
+      <div>
+        <div className="SideBarTopicTitle">
+          <p>linear algebra<i className="fa fa-arrow-circle-down"></i></p>
+        </div>
+        <div className="sideBarTopicDiv">
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+        </div>
+        <div className="SideBarTopicTitle">
+          <p>linear algebra<i className="fa fa-arrow-circle-down"></i></p>
+        </div>
+        <div className="sideBarTopicDiv">
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+          <div className="SideBarTopicName">
+            <p>rank of matrix</p>
+          </div>
+        </div>
       </div>
+     
     </>
   );
 };
-export default SidebarMath;
+export default Accordian;
