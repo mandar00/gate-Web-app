@@ -1,11 +1,1120 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 10px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.topnav {
+  background-color: #2c3a47;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.topnav :nth-child(7) {
+  position: -webkit-sticky;
+  position: sticky;
+  float: right;
+  right: 9rem;
+}
+
+.topnav :nth-child(8) {
+  position: absolute;
+  float: right;
+  right: 3rem;
+}
+
+.topnav :nth-child(9) {
+  position: absolute;
+  float: right;
+  right: 0.5rem;
+}
+
+.topnav > a {
+  float: left;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.nav_hamburger {
+  display: none;
+  background-color: transparent;
+  color: white;
+  border: solid 0px black;
+  font-size: 1.5rem;
+}
+
+a.active {
+  color: #18d6e7;
+}
+
+.homeMainDiv1 {
+  width: 98.7vw;
+  height: 100%;
+  background-color: violet;
+  overflow: hidden;
+}
+
+.homeMainDiv1 .silderDiv1 {
+  width: 100%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: yellow;
+  color: white;
+}
+
+.homeMainDiv1 .silderDiv1 .overLay1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.homeMainDiv1 .silderDiv1 h1 {
+  width: 55rem;
+  height: 5rem;
+  margin-top: 10rem;
+  padding-left: 3rem;
+  font-size: 4rem;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+
+.homeMainDiv1 .silderDiv1 h2 {
+  width: 40rem;
+  height: 2rem;
+  padding-left: 3rem;
+  font-size: 1.5rem;
+}
+
+.homeMainDiv1 .silderDiv1 p {
+  width: 40rem;
+  height: 5rem;
+  margin-top: 1rem;
+  padding-left: 3rem;
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    right: 0px;
+  }
+  7% {
+    right: 0px;
+  }
+  14% {
+    right: 1400px;
+  }
+  21% {
+    right: 1400px;
+  }
+  28% {
+    right: 2800px;
+  }
+  35% {
+    right: 2800px;
+  }
+  42% {
+    right: 4200px;
+  }
+  56% {
+    right: 4200px;
+  }
+  63% {
+    right: 2800px;
+  }
+  70% {
+    right: 2800px;
+  }
+  84% {
+    right: 1400px;
+  }
+  91% {
+    right: 1400px;
+  }
+  98% {
+    right: 0px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    right: 0px;
+  }
+  7% {
+    right: 0px;
+  }
+  14% {
+    right: 1400px;
+  }
+  21% {
+    right: 1400px;
+  }
+  28% {
+    right: 2800px;
+  }
+  35% {
+    right: 2800px;
+  }
+  42% {
+    right: 4200px;
+  }
+  56% {
+    right: 4200px;
+  }
+  63% {
+    right: 2800px;
+  }
+  70% {
+    right: 2800px;
+  }
+  84% {
+    right: 1400px;
+  }
+  91% {
+    right: 1400px;
+  }
+  98% {
+    right: 0px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+.homeMainDiv {
+  width: 98.7vw;
+  height: 100%;
+  background-color: salmon;
+  overflow: hidden;
+}
+
+.homeMainDiv .sliderDiv {
+  width: 400%;
+  height: 89vh;
+  background-color: #153a25;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-animation: slide 38s linear 2s infinite forwards alternate;
+          animation: slide 38s linear 2s infinite forwards alternate;
+}
+
+.homeMainDiv .sliderDiv .imageContainer {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+
+.homeMainDiv .sliderDiv .imageContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.homeMainDiv .homeContentDiv {
+  width: 100%;
+  height: 30rem;
+  position: absolute;
+  background: white;
+  background: linear-gradient(4deg, white 25%, rgba(44, 58, 71, 0.95861) 92%);
+}
+
+.homeMainDiv .homeContentDiv .homeContentTitle {
+  position: relative;
+  width: 40%;
+  height: 5rem;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers {
+  width: 100%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentLec {
+  width: 25%;
+  position: relative;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentLec .homeContentLecImg {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 3px 9px 0px black;
+          box-shadow: 2px 3px 9px 0px black;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentLec .homeContentLecImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentLec .homeContentLecImg p {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentNotes {
+  width: 25%;
+  position: relative;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentNotes .homeContentNotesImg {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 3px 9px 0px black;
+          box-shadow: 2px 3px 9px 0px black;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentNotes .homeContentNotesImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentNotes .homeContentNotesImg p {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentTest {
+  width: 25%;
+  position: relative;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentTest .homeContentTestImg {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 3px 9px 0px black;
+          box-shadow: 2px 3px 9px 0px black;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentTest .homeContentTestImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentTest .homeContentTestImg p {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentForum {
+  width: 25%;
+  position: relative;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentForum .homeContentForumImg {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 3px 9px 0px black;
+          box-shadow: 2px 3px 9px 0px black;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentForum .homeContentForumImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.homeMainDiv .homeContentDiv .homeContentFeatuers .homeContentForum .homeContentForumImg p {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.signUpMaindiv {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  background-color: #2c3a47;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2c3a47), color-stop(86%, #ffffff));
+  background-image: linear-gradient(180deg, #2c3a47 0%, #ffffff 86%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signUpMaindiv .mainSignUpCard {
+  width: 90%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 2rem;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpImg {
+  width: 50%;
+  height: 100%;
+  background-color: chocolate;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpImg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpForm {
+  width: 50%;
+  height: 100%;
+  background-color: #2c3a47a6;
+  border-radius: 2rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  border: 4px solid #2c3a47;
+  border-left: none;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpForm .mainSignUpFormTitle {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpForm input {
+  width: 25rem;
+  height: 2rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpForm p {
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpForm p a {
+  text-decoration: none;
+  color: #18d6e7;
+}
+
+.signUpMaindiv .mainSignUpCard .mainSignUpForm button {
+  width: 6rem;
+  height: 2rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  background-color: #2c3a47;
+  color: white;
+}
+
+.mainLoginDiv {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  background-color: #2c3a47;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2c3a47), color-stop(86%, #ffffff));
+  background-image: linear-gradient(180deg, #2c3a47 0%, #ffffff 86%);
+}
+
+.mainLoginDiv .loginCard {
+  width: 30%;
+  height: 80%;
+  background-color: yellowgreen;
+  margin: 4rem auto;
+  border-radius: 2rem;
+  background-color: #2c3a47a6;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainLoginDiv .loginCard .loginTitle {
+  width: 100%;
+  height: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.mainLoginDiv .loginCard .loginForm {
+  width: 100%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+}
+
+.mainLoginDiv .loginCard .loginForm input {
+  width: 80%;
+  height: 2rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.mainLoginDiv .loginCard .loginForm p {
+  width: 100%;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 450;
+}
+
+.mainLoginDiv .loginCard .loginForm p a {
+  text-decoration: none;
+  color: #18d6e7;
+}
+
+.mainLoginDiv .loginCard .loginForm button {
+  width: 30%;
+  height: 2rem;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  background-color: #2c3a47;
+  color: white;
+}
+
+.mainLoginDiv .loginCard .loginForm .loginHrDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+.mainLoginDiv .loginCard .loginForm .loginHr1 {
+  width: 90%;
+  height: 1px;
+  margin: auto;
+  color: black;
+}
+
+.mainLoginDiv .loginCard .loginForm .googleLogin {
+  width: 40%;
+  height: 2.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainLoginDiv .loginCard .loginForm .googleLogin img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+}
+
+.profileMainDiv {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  background-color: #2c3a47;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2c3a47), color-stop(86%, #ffffff));
+  background-image: linear-gradient(180deg, #2c3a47 0%, #ffffff 86%);
+}
+
+.profileMainDiv .profileCardTitle {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2rem;
+  border: 3px solid white;
+  background-color: #2c3a47a6;
+}
+
+.profileMainDiv .profileCardTitle .profileUserName {
+  width: 80%;
+  height: 20%;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  border-radius: 2rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileImageDiv {
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  top: -5rem;
+  left: 3rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 3px solid white;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileImageDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv {
+  width: 88%;
+  height: 100%;
+  margin-left: auto;
+  border-radius: 2rem;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv .profileUserDetailsTitle {
+  width: 50%;
+  height: 10%;
+  margin: auto;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv .profileUserDetailsTitle p {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv .profileUserDetails {
+  width: 100%;
+  height: 85%;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 7rem;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv .profileUserDetails label {
+  width: 80%;
+  height: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv .profileUserDetails label input {
+  width: 50%;
+  height: 2rem;
+  margin: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 100;
+  color: black;
+  background-color: transparent;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv .profileUserDetails label select {
+  width: 50%;
+  height: 2rem;
+  margin: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: black;
+  background-color: transparent;
+}
+
+.profileMainDiv .profileCardTitle .profileCardContent .profileUserDetailsDiv .profileUserDetails button {
+  width: 7rem;
+  height: 2rem;
+  background-color: #2c3a47;
+  color: white;
+  margin: 2rem;
+  border-radius: 1rem;
+}
+
+.lecMainDiv {
+  width: 98.7vw;
+  height: 100%;
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(93%, white), to(rgba(44, 58, 71, 0.496426)));
+  background: linear-gradient(0deg, white 93%, rgba(44, 58, 71, 0.496426) 100%);
+  overflow-x: hidden;
+}
+
+.lecMainDiv .lecSubBar {
+  width: 100%;
+  height: 3rem;
+  background-color: bisque;
+  position: relative;
+}
+
+.lecMainDiv .lecSubBar a {
+  display: block;
+  float: left;
+  width: 5rem;
+  height: 100%;
+  margin: 0 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.lecMainDiv .lecMainContentDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lecMainDiv .lecMainContentDiv .lecSideBarDiv {
+  width: 20%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.lecMainDiv .lecMainContentDiv .lecSideBarDiv .lecSidebarTitle {
+  width: 100%;
+  height: 7%;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: white;
+}
+
+.lecMainDiv .lecMainContentDiv .lecVideoDiv {
+  width: 80%;
+  height: 100%;
+}
+
+.lecMainDiv .lecMainContentDiv .lecVideoDiv .lecVideoDivTitle {
+  width: 100%;
+  height: 9%;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.lecMainDiv .lecMainContentDiv .lecVideoDiv .lecVideoLink {
+  width: 100%;
+  height: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lecMainDiv .lecMainContentDiv .lecVideoDiv .lecVideoLink .lecVideoIcon {
+  width: 10%;
+  height: 100%;
+  margin: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lecMainDiv .lecMainContentDiv .lecVideoDiv .lecVideoLink .lecVideoIcon img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.lecMainDiv .lecMainContentDiv .lecVideoDiv .lecVideoLink .lecVideoTitle {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.lecMathDiv {
+  margin-top: 2rem;
+}
+
+.lecMathDiv p {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0rem;
+}
+
+.lecMathDiv .lecSubTopicName {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
+.lecMathDiv .lecVideoTitle {
+  width: 100%;
+  height: 100%;
+}
+
+.lecMathDiv .lecVideoTitle a {
+  text-decoration: none;
+  color: black;
+}
+
+.mathSideBarMainDiv {
+  width: 100%;
+}
+
+.mathSideBarMainDiv .mathSidebarSubDiv {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.mathSideBarMainDiv .mathSidebarSubDiv p {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.mathSideBarMainDiv .mathSidebarSubDiv .SideBarTopicTitle {
+  width: 100%;
+  height: 2rem;
+  margin: 0.6rem 0;
+  box-shadow: -1px -13px 27px -9px rgba(0, 0, 0, 0.63) inset;
+  -webkit-box-shadow: -1px -13px 27px -9px rgba(0, 0, 0, 0.63) inset;
+  -moz-box-shadow: -1px -13px 27px -9px rgba(0, 0, 0, 0.63) inset;
+}
+
+.mathSideBarMainDiv .mathSidebarSubDiv .SideBarTopicTitle p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.mathSideBarMainDiv .mathSidebarSubDiv .SideBarTopicName {
+  width: 100%;
+  height: 1.8rem;
+  margin: 0.2rem 0;
+}
+
+.mathSideBarMainDiv .mathSidebarSubDiv .SideBarTopicName a {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+  text-decoration: none;
+  color: black;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.goToTop {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.goToTop img {
+  width: 100%;
+  height: 100%;
+}
+
+.goToTop button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  font-size: 3rem;
+}
+
+.notesMainDiv {
+  width: 98.7vw;
+  height: 100%;
+  overflow-x: hidden;
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(93%, white), to(rgba(44, 58, 71, 0.496426)));
+  background: linear-gradient(0deg, white 93%, rgba(44, 58, 71, 0.496426) 100%);
+}
+
+.notesMainDiv .notesSubBar {
+  width: 100%;
+  height: 3rem;
+  background-color: bisque;
+  position: relative;
+}
+
+.notesMainDiv .notesSubBar a {
+  display: block;
+  float: left;
+  width: 5rem;
+  height: 100%;
+  margin: 0 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.notesMainDiv .notesMainContentDiv {
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, white), to(rgba(44, 58, 71, 0.496426)));
+  background: linear-gradient(0deg, white 25%, rgba(44, 58, 71, 0.496426) 100%);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdfDivTitle {
+  width: 100%;
+  height: 8%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdf {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 2rem 0;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdf p {
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdf .notesPdfTopicDiv {
+  width: 100%;
+  height: 3rem;
+  margin: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdf .notesPdfTopicDiv .notesPdfIcon {
+  width: 15%;
+  height: 100%;
+  margin: 0 2rem;
+  text-align: center;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdf .notesPdfTopicDiv .notesPdfIcon img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdf .notesPdfTopicDiv .notesPdfTitle {
+  width: 85%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.notesMainDiv .notesMainContentDiv .notesPdfDiv .notesPdf .notesPdfTopicDiv .notesPdfTitle a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .topnav > a:not(:first-child) {
+    display: none;
+  }
+  .nav_hamburger {
+    float: right;
+    display: block;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .nav_hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=main.css.map */
