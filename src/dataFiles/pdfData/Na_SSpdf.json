@@ -1,10 +1,10 @@
 [
+    
     {
-        "name":"Network Anaylisis  Signals and Systems"
-    },
-    {
-        "NA":"../pdf/NA_SS/Network Theory-ME-EE (gate2016.info).pdf",
-        "SS":"../pdf/NA_SS/Signals & Systems-ME-EE (gate2016.info).pdf"
+        "topic":["Netwrok Analysis ","Signals and Systems"],
+        "path":["https://drive.google.com/file/d/1MnVK1juh_vc7LPSe4A3LfboHhArFAMID/view?usp=sharing",
+            "https://drive.google.com/file/d/10wl4lUTlLvpl2eH_xXzJmU5B36r3Ow1x/view?usp=sharing"]
+        
 
 
     }

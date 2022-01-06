@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Math from "./Math";
 import NetworkSignal from "./NetworkSignal";
 import SidebarMath from "./SidebarMath";
 import SideBarNetworkSignal from "./SideBarNetworkSignal";
-import toTop from "../../images/top.png"
 
 
 
@@ -14,13 +13,43 @@ import toTop from "../../images/top.png"
 const VideoLec = () => {
 
 
+
 const [show,setShow]=useState(false);
 
 const onScroll=()=>{
-  console.log(window.scrollY)
+  if(window.scrollY>330){
+    setShow(true)
+  }else{
+    setShow(false)
+  }
 }
 
-window.addEventListener("scroll",onScroll)
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
+
+
+useEffect(()=>{
+  window.addEventListener("scroll",onScroll)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+  return(()=>{
+    window.removeEventListener("scroll",onScroll)
+  })
+},[])
+
+
   return (
     <>
       <div onScroll={onScroll} className="lecMainDiv">
@@ -47,7 +76,7 @@ window.addEventListener("scroll",onScroll)
           </div>
         </div>
         <div className="goToTop">
-            {show && <button className="topbtn" type="button"><img src={toTop} alt="top"  ></img></button> }
+            {show && <button onClick={topFunction} className="topbtn" type="button"><i className="fa fa-arrow-circle-o-up"></i></button> }
         </div>
       </div>
     </>
